@@ -1,0 +1,73 @@
+site_name: USC Documentations
+theme: 
+  name: material
+  language: en
+  palette:
+    primary: blue
+    accent: orange
+
+copyright: 'Copyright &copy; 2024 USC Power Limited'
+
+markdown_extensions:
+  - meta
+  - fenced_code
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.footnotes
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.extra
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - attr_list
+
+extra_css:
+  - css/styles.css
+  - 'https://use.fontawesome.com/releases/v5.0.13/css/all.css'
+
+nav:
+  - Jan 2025: ./202501/code-generation.md
+  - Feb 2025: 
+    - SO Costing Planning: ./202502/so-costing-planning.md
+    - SO Costing Requirement: ./202502/so-costing-requirement.md
+    - Org Chart: ./202502/it-team.org.md
+    - AAS: ./202502/aas.networking.md
+  - Mar 2025:
+    - 移动应用集成 Odoo 工时表模块: ./202503/Timesheet-in-app.md
+    - Access SharePoint Document Library with OneDrive: ./202503/onedrive-sharepoint.md
+    - POAS Bridge Setup: ./202503/poas-bridge.md
+  - Odoo User Guide: 
+    - Index: ./guides/user-guide.index.md
+    - Getting Start: 
+      - Logging In: ./guides/odoo/getting-start/logging-into.md
+      - Navigating the Odoo Interface: ./guides/odoo/getting-start/odoo-interface.md
+      - Profile: ./guides/odoo/getting-start/profile.md
+    - Order Management:
+      - Create Contact: ./guides/odoo/order-management/create-contact.md
+      - CRM Opportunity: ./guides/odoo/order-management/crm-opportunity.md
+      - Quotation Management: 
+        - Cost Sheet Preparation: ./guides/odoo/order-management/cost-sheet-management.md
+        - Create Quotation: ./guides/odoo/order-management/create-quotation.md
+        - Quotation Approval: ./guides/odoo/order-management/quotation-approval.md
+      - Sale Order Management: 
+        - Convert Quotation to Sale Order: ./guides/odoo/order-management/convert-quotation.md
+        - Project Management: ./guides/odoo/order-management/project-management.md
+        - Milestone and Delivery Management: ./guides/odoo/order-management/milestone_and_delivery.md
+        - Timesheet Management for Sales Orders: ./guides/odoo/order-management/timesheet.md
+        - Expenses Management: ./guides/odoo/order-management/expense-management.md
+    - Product Management: ./guides/odoo/order-management/product-management.md
+    - Timesheet Management: ./guides/odoo/order-management/timesheet-management.md
+    - Purchase Order Management: 
+      - For Sale Order: ./guides/odoo/purchase-order-management/purchase-order-for-sale.md
+      - Without Sale Order: ./guides/odoo/purchase-order-management/purchase-order-wo-sale.md

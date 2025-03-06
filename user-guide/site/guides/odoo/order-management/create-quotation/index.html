@@ -1,0 +1,1352 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../cost-sheet-management/">
+      
+      
+        <link rel="next" href="../quotation-approval/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>Create Quotation - USC Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/styles.css">
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#usc-odoo-user-guide-create-quotation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="USC Documentations" class="md-header__button md-logo" aria-label="USC Documentations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            USC Documentations
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create Quotation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="USC Documentations" class="md-nav__button md-logo" aria-label="USC Documentations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    USC Documentations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../usc-flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USC Order Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Start
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-start/logging-into/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-start/odoo-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navigating the Odoo Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-start/profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Profile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Order Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Order Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crm-opportunity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CRM Opportunity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quotation Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Quotation Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cost-sheet-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost Sheet Preparation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Create Quotation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Create Quotation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-accessing-the-sales-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Accessing the Sales Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creating-a-new-quotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creating a New Quotation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Creating a New Quotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-about-quotation-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 About Quotation Number
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sending-the-quotation-via-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sending the Quotation via Email
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cannot-submit-quotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cannot Submit Quotation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#it-support-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT Support Contact
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quotation-approval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quotation Approval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sale Order Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sale Order Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../convert-quotation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convert Quotation to Sale Order
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../milestone_and_delivery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Milestone and Delivery Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timesheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timesheet Management for Sales Orders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../expense-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expenses Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timesheet-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timesheet Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Purchase Order Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Purchase Order Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../purchase-order-management/purchase-order-for-sale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    For Sale Order
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../purchase-order-management/purchase-order-wo-sale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Without Sale Order
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-accessing-the-sales-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Accessing the Sales Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creating-a-new-quotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creating a New Quotation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Creating a New Quotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-about-quotation-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 About Quotation Number
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sending-the-quotation-via-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sending the Quotation via Email
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cannot-submit-quotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cannot Submit Quotation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#it-support-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT Support Contact
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="usc-odoo-user-guide-create-quotation">USC Odoo User Guide - Create Quotation<a class="headerlink" href="#usc-odoo-user-guide-create-quotation" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Creating a quotation in Odoo is a critical step in formalizing offers to clients based on approved cost sheets and validated opportunities. This guide provides a clear workflow for generating accurate and complete sales quotations while adhering to USC's internal guidelines.</p>
+<hr />
+<h2 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permanent link">&para;</a></h2>
+<p>Before creating a quotation, make sure you have completed the following steps:</p>
+<ul>
+<li><a href="../cost-sheet-management/">Cost Sheet Preparation</a></li>
+<li><a href="../crm-opportunity/">Manage Opportunities</a></li>
+</ul>
+<p>Also, ensure you are logged into the Odoo system:</p>
+<ul>
+<li><a href="../../getting-start/logging-into/">How to Log into Odoo</a></li>
+</ul>
+<hr />
+<h2 id="key-requirements">Key Requirements<a class="headerlink" href="#key-requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Add at Least One Product:</strong> Every quotation must include at least one product or service.</li>
+<li><strong>Attach the Cost Sheet:</strong> Upload the prepared and approved cost sheet to the quotation.</li>
+<li><strong>Customer Reference Field:</strong> If applicable, enter the Customer PO Number or Tender Number in the customer reference field.</li>
+<li><strong>Approval Required:</strong> Ensure the quotation is reviewed by either Steven or Jakin before sending it to the customer via email.</li>
+</ul>
+<hr />
+<h2 id="step-by-step-instructions">Step-by-Step Instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">&para;</a></h2>
+<h3 id="1-accessing-the-sales-module">1. Accessing the Sales Module<a class="headerlink" href="#1-accessing-the-sales-module" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Log into Odoo:</strong> Ensure you are logged into the USC Odoo system.</li>
+<li><strong>Navigate to Sales:</strong></li>
+<li>Click on the <strong>Apps Menu</strong> (grid icon) in the top navigation bar.</li>
+<li>Select <strong>Sales</strong> from the list of available modules.</li>
+</ol>
+<p>📷 <strong>Image Suggestion:</strong> Screenshot showing the Sales module icon in the app menu.</p>
+<hr />
+<h3 id="2-creating-a-new-quotation">2. Creating a New Quotation<a class="headerlink" href="#2-creating-a-new-quotation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Click on Create:</strong> In the Sales module, click the <strong>Create</strong> button to start a new quotation.</p>
+</li>
+<li>
+<p><strong>Fill in Quotation Fields:</strong></p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Field Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Impact / Effect</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Customer</strong></td>
+<td>Select the customer from the dropdown and choose the correct contact person.</td>
+<td>Links the quotation to the appropriate customer record for future sales and invoicing.</td>
+</tr>
+<tr>
+<td><strong>Customer Reference</strong></td>
+<td>Enter the customer PO number or tender number if applicable.</td>
+<td>Helps match internal records with customer procurement documents.</td>
+</tr>
+<tr>
+<td><strong>Product</strong></td>
+<td>Add at least one product/service to the quotation.</td>
+<td>Ensures the quotation is valid and ready for pricing and approval.</td>
+</tr>
+<tr>
+<td><strong>Cost Sheet Attachment</strong></td>
+<td>Upload the approved cost sheet in the attachment section.</td>
+<td>Any quotation without a cost sheet will be rejected.</td>
+</tr>
+<tr>
+<td><strong>Quotation Date</strong></td>
+<td>Set the date of the quotation.</td>
+<td>Determines the start of the quotation validity period.</td>
+</tr>
+<tr>
+<td><strong>Expiration Date</strong></td>
+<td>Define when the quotation expires.</td>
+<td>Communicates the offer's validity to the customer.</td>
+</tr>
+<tr>
+<td><strong>Payment Terms</strong></td>
+<td>Select the standard or specific payment terms for the customer.</td>
+<td>Automates payment conditions in the sales order if the quotation is accepted.</td>
+</tr>
+</tbody>
+</table>
+<p>📷 <strong>Image Suggestion:</strong> Screenshot of the Create Quotation form with all required fields highlighted.
+<img alt="quotation entry point" src="../create-quotation-entry.png" />
+<img alt="quotation entry point" src="../create-quotation-entry2.png" />
+<img alt="quotation entry point" src="../create-quotation-entry3.png" /></p>
+<h4 id="21-about-quotation-number">2.1 About Quotation Number<a class="headerlink" href="#21-about-quotation-number" title="Permanent link">&para;</a></h4>
+<p>The quotation number will be generated automatically upon the quotation being saved. And the quotation number can be modified before it has been confirmed.<br />
+The quotation number format <code>TTCCCBDDDDDDS-RN</code>    </p>
+<ul>
+<li><strong><code>TT</code></strong>: The document type, <ul>
+<li><code>QU</code>: Quotation, </li>
+<li><code>SO</code>: Sale Order, </li>
+<li><code>PO</code>: Purchase Order, </li>
+<li><code>DN</code>: Delivery Note, </li>
+<li><code>IN</code>: Invoice.  </li>
+</ul>
+</li>
+<li><strong>CCC</strong>: The customer short code, defined in <code>Contact</code>.  </li>
+<li><strong>B</strong>: The transation term, <ul>
+<li><code>B</code>: I + T + M = Bundle sale</li>
+<li><code>I</code>: Installation</li>
+<li><code>M</code>: Manntenance</li>
+<li><code>S</code>: Service  </li>
+<li><code>P</code>: Project Management</li>
+<li><code>T</code>: Trading  </li>
+<li><code>U</code>: Undefined</li>
+</ul>
+</li>
+<li><strong>DDDDDD</strong>: The date of creation   </li>
+<li><strong>S</strong>: The sequential number is grouped by the creation date in English characters, where 1 = A, 2 = B, and so on.   </li>
+<li><strong>RN</strong>: Only available when the document is revised. <code>-R</code> represents the fixed characters, and <code>N</code> is the number of revisions.  </li>
+</ul>
+<hr />
+<h3 id="3-sending-the-quotation-via-email">3. Sending the Quotation via Email<a class="headerlink" href="#3-sending-the-quotation-via-email" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Review the Quotation:</strong> Double-check all fields and attached documents.</li>
+<li><strong>Approval Check:</strong> Ensure the quotation is reviewed by Steven or Jakin before sending.</li>
+<li><strong>Send via Email:</strong></li>
+<li>Use Odoo's <strong>Send by Email</strong> feature to send the quotation directly to the customer.</li>
+<li>Alternatively, download the quotation as a PDF and send it through your email client.</li>
+<li><strong>Document the Sent Quotation:</strong> Attach a copy of the sent email or save a PDF copy in Odoo for record-keeping.</li>
+</ol>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ensure Accuracy:</strong> Double-check all quotation details, including products, prices, and terms.</li>
+<li><strong>Follow Approval Protocols:</strong> Do not send any quotation without prior review by the authorized personnel.</li>
+<li><strong>Maintain Records:</strong> Keep all cost sheets and related documents attached to the quotation for auditing purposes.</li>
+</ul>
+<hr />
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="1-cannot-submit-quotation">1. Cannot Submit Quotation<a class="headerlink" href="#1-cannot-submit-quotation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Missing Cost Sheet:</strong> Attach the approved cost sheet before submission.</li>
+<li><strong>Product Not Added:</strong> Ensure at least one product is listed in the quotation.</li>
+<li><strong>Approval Issues:</strong> Confirm that the approver is either Steven or Jakin.</li>
+</ul>
+<hr />
+<h2 id="it-support-contact">IT Support Contact<a class="headerlink" href="#it-support-contact" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:ericmok@uscpower.net">ericmok@uscpower.net</a></li>
+<li><strong>Phone:</strong> +852 6622 7663</li>
+</ul>
+<hr />
+<p><a href="../../../../">&lt;- Back to Index</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 USC Power Limited
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>

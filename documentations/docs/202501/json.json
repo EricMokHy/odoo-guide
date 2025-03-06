@@ -1,0 +1,395 @@
+[
+    {
+        "id": "b2a8e3bee88a01f6",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ee018c507a8c84d7",
+        "type": "LoRa Input",
+        "z": "b2a8e3bee88a01f6",
+        "name": "",
+        "devEUI": "",
+        "extendedField": "",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "1ef5040e1a00b2ad"
+            ]
+        ]
+    },
+    {
+        "id": "258aa069238809d1",
+        "type": "mqtt out",
+        "z": "b2a8e3bee88a01f6",
+        "name": "",
+        "topic": "devices/ug65-166node/messages/events/",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8d4082bc68f4aa2f",
+        "x": 760,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "71e9a1fd72987d30",
+        "type": "debug",
+        "z": "b2a8e3bee88a01f6",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2efae08c16c0ac47",
+        "type": "mqtt in",
+        "z": "b2a8e3bee88a01f6",
+        "name": "",
+        "topic": "devices/ug65-166node/messages/devicebound/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "8d4082bc68f4aa2f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 400,
+        "wires": [
+            [
+                "7fe7f777c1b5aa44",
+                "6fb019fa5379eb8c"
+            ]
+        ]
+    },
+    {
+        "id": "1ef5040e1a00b2ad",
+        "type": "Device Filter",
+        "z": "b2a8e3bee88a01f6",
+        "name": "UC300",
+        "eui": "24E124445B431930",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "258aa069238809d1",
+                "71e9a1fd72987d30"
+            ]
+        ]
+    },
+    {
+        "id": "7fe7f777c1b5aa44",
+        "type": "debug",
+        "z": "b2a8e3bee88a01f6",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "206698e70955f568",
+        "type": "http request",
+        "z": "b2a8e3bee88a01f6",
+        "name": "login &gt; token",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "dffb05c3d4a826be"
+            ]
+        ]
+    },
+    {
+        "id": "4c5e153b013ae303",
+        "type": "inject",
+        "z": "b2a8e3bee88a01f6",
+        "name": "get token",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 120,
+        "y": 720,
+        "wires": [
+            [
+                "ff81c3081aa14fb3"
+            ]
+        ]
+    },
+    {
+        "id": "ff81c3081aa14fb3",
+        "type": "function",
+        "z": "b2a8e3bee88a01f6",
+        "name": "prepare login &gt; token",
+        "func": "msg.url=\"https://127.0.0.1:8080/api/internal/login\";\nmsg.payload = {\"password\":\"password\",\"username\":\"apiuser\"} ;//JSON\nmsg.headers = {};\nmsg.headers['content-type'] = 'application/json';\nmsg.rejectUnauthorized=false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 720,
+        "wires": [
+            [
+                "206698e70955f568"
+            ]
+        ]
+    },
+    {
+        "id": "dffb05c3d4a826be",
+        "type": "json",
+        "z": "b2a8e3bee88a01f6",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 650,
+        "y": 660,
+        "wires": [
+            [
+                "38e0ef97fadffc90",
+                "d9c28a91b90ffc4d"
+            ]
+        ]
+    },
+    {
+        "id": "e4fc8c7cc1177fc7",
+        "type": "debug",
+        "z": "b2a8e3bee88a01f6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "da29fc1e541aa91a",
+        "type": "comment",
+        "z": "b2a8e3bee88a01f6",
+        "name": "Get a Token from the UG65 API",
+        "info": "",
+        "x": 170,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "6fb019fa5379eb8c",
+        "type": "function",
+        "z": "b2a8e3bee88a01f6",
+        "name": "function 2",
+        "func": "msg.deveui_t = msg.payload.deveui;\nmsg.data_t = hexStringToDecimalArray(msg.payload.data);\nmsg.token_t = global.get(\"tk\");\n\nfunction hexStringToDecimalArray(hexStr) {\n    const decimalArray = [];\n    for (let i = 0; i &lt; hexStr.length; i += 2) {\n        const hexPair = hexStr.substr(i, 2);\n        const decimalValue = parseInt(hexPair, 16);\n        decimalArray.push(decimalValue);\n    }\n    return decimalArray;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 520,
+        "wires": [
+            [
+                "4465a5daf2c21b43",
+                "d008a76481d185a7"
+            ]
+        ]
+    },
+    {
+        "id": "4465a5daf2c21b43",
+        "type": "debug",
+        "z": "b2a8e3bee88a01f6",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d008a76481d185a7",
+        "type": "function",
+        "z": "b2a8e3bee88a01f6",
+        "name": "Prepare downlink",
+        "func": "msg.url=\"https://127.0.0.1:8080/api/devices/\"+msg.deveui_t+\"/queue\";\nmsg.payload = {\"confirmed\":false,\n               \"data\":Buffer.from(msg.data_t).toString('base64'), //data \"Buffer\" convert to base64\n               \"devEUI\":msg.deveui_t,\n               \"fPort\":85} ;\n//msg.headers = {};\nmsg.headers = {\"Authorization\":msg.token_t};\nmsg.headers['content-type'] = 'application/json';\nmsg.rejectUnauthorized=false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "6270a822c5a450c5"
+            ]
+        ]
+    },
+    {
+        "id": "38e0ef97fadffc90",
+        "type": "function",
+        "z": "b2a8e3bee88a01f6",
+        "name": "function 3",
+        "func": "global.set(\"tk\", msg.payload.jwt);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 820,
+        "wires": [
+            [
+                "e4fc8c7cc1177fc7"
+            ]
+        ]
+    },
+    {
+        "id": "d9c28a91b90ffc4d",
+        "type": "debug",
+        "z": "b2a8e3bee88a01f6",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "bd73814525524456",
+        "type": "debug",
+        "z": "b2a8e3bee88a01f6",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "6270a822c5a450c5",
+        "type": "http request",
+        "z": "b2a8e3bee88a01f6",
+        "name": "post downlink to UG65 API",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 700,
+        "y": 540,
+        "wires": [
+            [
+                "bd73814525524456"
+            ]
+        ]
+    },
+    {
+        "id": "8d4082bc68f4aa2f",
+        "type": "mqtt-broker",
+        "name": "Azure",
+        "broker": "ug65test-m.azure-devices.net",
+        "port": "8883",
+        "tls": "712bcbbb5cee7038",
+        "clientid": "ug65-166node",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "712bcbbb5cee7038",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    }
+]

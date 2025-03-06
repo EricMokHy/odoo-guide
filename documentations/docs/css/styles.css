@@ -1,0 +1,93 @@
+.text-center {
+    text-align: center;
+}
+
+article img {
+    border: 1px solid #eee;
+    box-shadow: 0 0 1em #ccc;
+    margin: 30px auto 10px;
+}
+
+article img.emojione {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+.md-footer-nav {
+    background-color: rgba(0,0,0,.57);
+}
+
+
+/* Docker Branding */
+.md-header {
+    background-color: #0d9cec !important;
+}
+
+@font-face{
+    font-family: "Geomanist";
+    src: url("../fonts/hinted-Geomanist-Book.ttf")
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #577482;
+    word-wrap: break-word;
+}
+
+h1, h2, h3, h4, .md-footer-nav__inner, .md-header-nav__title, footer.md-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(1, 125, 167);
+}
+
+.md-header-nav__title {
+    line-height: 2.9rem;
+}
+
+.md-header-nav__button img {
+    width: 145px;
+}
+
+.md-typeset code {
+    color: #E74C3C;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 2px 5px;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
+    max-width: 100%;
+    /* background: rgb(206, 206, 206); */
+    border: solid 1px #e1e4e5;
+    font-size: 75%;
+    overflow-x: auto;
+}
+
+.md-typeset blockquote {
+    border: solid 1px rgb(225, 228, 229);
+    background-color: #f5f5f5;
+    border-left: solid .2rem #ff6600;
+    padding: .5rem .2rem .5rem .8rem;
+}
+
+.md-typeset blockquote::before {
+    content: "\f10e    NOTES";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    color: #ff6600;
+    display: block;
+    margin-right: 0.3rem;
+}
+
+.md-typeset blockquote p {
+    padding: 0;
+    margin: 0;
+}
+
+article img {
+    border: 10px solid #fff;
+}
