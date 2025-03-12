@@ -7,7 +7,7 @@ This guide outlines the order workflow in Odoo, focusing on user roles and their
 ---
 
 ## The Entire Workflow
-![img](./order-flow.drawio.svg)  
+![img](./order-flow.drawio.png)  
 
 The workflow follows a structured route to ensure seamless order processing:
 
